@@ -1,0 +1,34 @@
+Math & Systems
+
+The number 4 is expressed in binary as 100. What is the number 5267 expressed as in binary?
+
+How many ways can you sort a deck of 52 cards? (hint: combinatorics)
+
+How does RAM work and how many types of volatile storage are on a computer?
+
+What is the difference between computation and storage?
+
+Is the proposition "A and not A" true or false. Explain why.
+
+Give your own boolean proposition that will always hold true.
+
+If there is a Person table with columns (name, age, gender), give a correct SELECT statement in SQL for:
+getting all names.
+getting all names alphabetically.
+getting all names of persons aged 20.
+getting all persons that are female.
+getting all females that are 20 and males that are 21.
+
+getting a count off males:
+SELECT COUNT(*)
+FROM Tablename
+WHERE gender = m;
+
+
+Data Structures
+
+What is the difference between a:
+heap and a stack
+array and linked list
+hashtable and a dictionary
+tree and a graph
