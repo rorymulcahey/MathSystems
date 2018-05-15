@@ -28,31 +28,22 @@ import math
 #         index += 1
 #     binary = ''.join(binary)
 #     return binary
-#
-#
-# binary_num = get_binary(1000000)
-# print(binary_num)
-# print('11110100001001000000')
-# print(math.log(1000000)/math.log(2))
-# print(2**20)
 
 
 def get_binary_fast(num):
+    print(num)
     binary = 0
-    while True:
-        if num == 0:
-            return 0
-        exp = math.ceil(math.log(num)/math.log(2))
-        print(exp)
-        if num == 2**exp:
-            binary += 10**exp
-            return binary
+    while num > 0:
+        exp = math.floor(math.log(num)/math.log(2))
         binary += 10**exp
-        num -= 2**(exp-1)
-        print(num)
+        num -= 2**exp
+    return binary
 
 
-binary_num = get_binary_fast(5267)
-print(binary_num)
-# print(2**7)
-# print(math.ceil(math.log(2**7)/math.log(2)))
+def find_binaries(lst):
+    for x in range(0, lst):
+        print(get_binary_fast(x))
+
+
+find_binaries(10000000)
+
