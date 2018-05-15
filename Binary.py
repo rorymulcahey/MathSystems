@@ -45,5 +45,17 @@ def find_binaries(lst):
         print(get_binary_fast(x))
 
 
-find_binaries(10000000)
+def decimal(binary):
+    num = 0
+    binary = str(binary)
+    binary = list(binary)
+    for x in range(0, len(binary)):
+        if binary[x] == '1':
+            num += 2**(len(binary)-1-x)
+    return num
+
+
+# find_binaries(10000000)
+print(get_binary_fast(1000))
+print(decimal(1111101000))
 
