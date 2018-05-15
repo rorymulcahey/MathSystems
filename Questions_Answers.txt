@@ -28,7 +28,10 @@ WHERE gender = m;
 Data Structures
 
 What is the difference between a:
-heap and a stack
-array and linked list
-hashtable and a dictionary
-tree and a graph
+1) heap and a stack - heap is static memory and stack is dynamic memory
+
+2) array and linked list
+
+3) hashtable and a dictionary
+
+4) tree and a graph
