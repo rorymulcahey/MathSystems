@@ -1,16 +1,20 @@
 Math & Systems
 
 The number 4 is expressed in binary as 100. What is the number 5267 expressed as in binary?
+Solved using exp = log(num)/log(2) rounded down for the digit of binary. Subtract 2^exp from num. Until zero is reached.
 
 How many ways can you sort a deck of 52 cards? (hint: combinatorics)
+52! (factorial)
 
 How does RAM work and how many types of volatile storage are on a computer?
 
 What is the difference between computation and storage?
 
 Is the proposition "A and not A" true or false. Explain why.
+This is false. 'Not' implies a contradiction between A and itself which can never be true. 
 
 Give your own boolean proposition that will always hold true.
+while True: ; 1 == 1 ; 1 != 0
 
 If there is a Person table with columns (name, age, gender), give a correct SELECT statement in SQL for:
 getting all names.
