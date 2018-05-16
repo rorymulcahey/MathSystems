@@ -1,16 +1,20 @@
 Math & Systems
 
 The number 4 is expressed in binary as 100. What is the number 5267 expressed as in binary?
+Solved using exp = log(num)/log(2) rounded down for the digit of binary. Subtract 2^exp from num. Until zero is reached.
 
 How many ways can you sort a deck of 52 cards? (hint: combinatorics)
+52! (factorial)
 
 How does RAM work and how many types of volatile storage are on a computer?
 
 What is the difference between computation and storage?
 
 Is the proposition "A and not A" true or false. Explain why.
+This is false. 'Not' implies a contradiction between A and itself which can never be true. 
 
 Give your own boolean proposition that will always hold true.
+while True: ; 1 == 1 ; 1 != 0
 
 If there is a Person table with columns (name, age, gender), give a correct SELECT statement in SQL for:
 getting all names.
@@ -30,8 +34,8 @@ Data Structures
 What is the difference between a:
 1) heap and a stack - heap is static memory and stack is dynamic memory
 
-2) array and linked list
+2) array and linked list - array has a fixed size, require more memory to perform add and delete tasks, lists has dynamic sizing and are more adaptable. Array can have easy access to index values. Lists require extra memory for a pointer. Arrays enhance performace with better cache locality. Arrays are best for index access and linked lists are best for resizing.
 
-3) hashtable and a dictionary
+3) hashtable and a dictionary- Dictionary is a generic type of data structure and a hash table is non-generic. Hashtables provide a safety thread whereas a dictionary has none.
 
-4) tree and a graph
+4) tree and a graph - A tree is a special type of graph. Trees have the parent/child relationship whereas a graph has multiple connections. 
