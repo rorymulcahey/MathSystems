@@ -30,8 +30,8 @@ Data Structures
 What is the difference between a:
 1) heap and a stack - heap is static memory and stack is dynamic memory
 
-2) array and linked list
+2) array and linked list - array has a fixed size, require more memory to perform add and delete tasks, lists has dynamic sizing and are more adaptable. Array can have easy access to index values. Lists require extra memory for a pointer. Arrays enhance performace with better cache locality. Arrays are best for index access and linked lists are best for resizing.
 
-3) hashtable and a dictionary
+3) hashtable and a dictionary- Dictionary is a generic type of data structure and a hash table is non-generic. Hashtables provide a safety thread whereas a dictionary has none.
 
-4) tree and a graph
+4) tree and a graph - A tree is a special type of graph. Trees have the parent/child relationship whereas a graph has multiple connections. 
