@@ -51,21 +51,21 @@ def conway(instances, digit):
     digit = str(digit)
     output = [digit]
     new_output = output
+    print(output)
     for x in range(0, instances-1):
         digit_index = 0
-        instances = 1
-        index = 1
         new_output = []
         while len(output) > digit_index:
             current_digit = output[digit_index]
-            while len(output) > digit_index + 1 and current_digit == output[digit_index + index]:
+            instances = 1
+            while len(output) > digit_index + 1 and current_digit == output[digit_index + 1]:
                 instances += 1
-                index += 1
                 digit_index += 1
             new_output = new_output + [str(instances)] + [str(current_digit)]
             digit_index += 1
         output = new_output
+        print(output)
     return new_output
 
 
-print(conway(5, 1))
+conway(7, 3)
