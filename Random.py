@@ -6,6 +6,7 @@ Give a random function.
 '''
 
 import datetime
+from random import randint
 
 # seed = input("Give a seed integer ")
 # type(seed)
@@ -23,8 +24,9 @@ def create_seed():
 
 
 def get_random(seed):
+    y = 0
     const = int(seed)
-    const = const % 1000/3000 + 4
+    const = const % 100000000/10000000000 + 4.25
     for x in range(0, 7):
         y = 0.5
         index = 0
@@ -32,13 +34,16 @@ def get_random(seed):
             y = const * y * (1 - y)
             index += 1
         y = int(y)
-    print(int(y % 10)+1)
     return int(y % 10)
 
 
 lst = [0] * 10
+lst2 = [0] * 10
 for z in range(0, 100000):
     new_seed = create_seed()
     random_num = get_random(new_seed)
     lst[int(random_num)] += 1
-print(lst)
+    temp = randint(0, 9)
+    lst2[temp] += 1
+print("My Function: ", lst)
+print("Python Function: ", lst2)
