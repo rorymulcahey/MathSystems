@@ -3,6 +3,7 @@
 Roman Numeral Converter: int GetIntegerValue(string value)
 Give a function to convert a Roman numeral to a base-10 integer.
 
+To do: OOP the roman numeral to base ten, then send it to is valid for checking
 '''
 
 
@@ -50,30 +51,52 @@ def is_valid(roman):
     for x in range(0, len(roman)-1):
         current_letter = roman[x]
         instances = 1
-        y, z = x, x
+        occurrences = 0
+        # duplicates = 0
+        w, y, z = x, x, x
+        if x+1 < len(roman) and add_int(current_letter)**10 < add_int(roman[x+1]):
+            return False
+        # while w+1 < len(roman) and add_int(current_letter) < add_int(roman[w+1]):
+        #     print('test')
+        #     w += 1
+        #     duplicates += 1
+        #     if duplicates == 2:
+        #         return False
         while y+1 < len(roman) and current_letter == roman[y+1]:
             instances += 1
             y += 1
-            if instances >= 4:
+            if instances == 4:
                 return False
-        if instances > 1:
-            while z+1 < len(roman) and current_letter == roman[z+1]:
-                if add_int(roman[z]) < add_int(roman[z + 1]):
-                    return False
-                z += 1
+        while z+1 < len(roman) and add_int(current_letter) < add_int(roman[z+1]):
+            occurrences += 1
+            z += 1
+            if occurrences == 2:
+                return False
     return True
 
 
-try:
-    roman_numeral = ''
-    while roman_numeral is not 0:
-        roman_numeral = input('Type a Roman Numeral: ')
-        roman_numeral = list(roman_numeral.upper())
-        if is_valid(roman_numeral):
-            roman_numeral = roman_to_decimal(roman_numeral)
-            print(roman_numeral)
-        else:
-            print('Not a valid number')
-            break
-except SyntaxError:
-    roman_numeral = None
+# try:
+#     roman_numeral = ''
+#     while roman_numeral is not 0:
+#         roman_numeral = input('Type a Roman Numeral: ')
+#         roman_numeral = list(roman_numeral.upper())
+#         if is_valid(roman_numeral):
+#             roman_numeral = roman_to_decimal(roman_numeral)
+#             print(roman_numeral)
+#         else:
+#             print('Not a valid number')
+#             break
+# except SyntaxError:
+#     roman_numeral = None
+
+roman_numeral = ''
+while roman_numeral is not 0:
+    roman_numeral = input('Type a Roman Numeral: ')
+    roman_numeral = list(roman_numeral.upper())
+    if is_valid(roman_numeral):
+        roman_numeral = roman_to_decimal(roman_numeral)
+        print(roman_numeral)
+    else:
+        print('Not a valid number')
+        break
+
