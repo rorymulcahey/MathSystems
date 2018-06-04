@@ -1,0 +1,84 @@
+Math & Systems
+
+The number 4 is expressed in binary as 100. What is the number 5267 expressed as in binary?
+
+How many ways can you sort a deck of 52 cards? (hint: combinatorics)
+
+How does RAM work and how many types of volatile storage are on a computer?
+
+What is the difference between computation and storage?
+
+Is the proposition "A and not A" true or false. Explain why.
+
+Give your own boolean proposition that will always hold true.
+
+If there is a Person table with columns (name, age, gender), give a correct SELECT statement in SQL for:
+getting all names.
+getting all names alphabetically.
+getting all names of persons aged 20.
+getting all persons that are female.
+getting all females that are 20 and males that are 21.
+getting a count off males.
+Data Structures
+
+What is the difference between a:
+heap and a stack
+array and linked list
+hashtable and a dictionary
+tree and a graph
+
+Algorithms
+
+Give the runtime in big-O notation in terms of n for the following piece of code/algorithm: for i in range(0, n): do_something(i)
+
+Below are common algorithmic questions.
+
+Autocomplete: string[] GetSuggestions(string[] corpus, string prefix)
+Given some corpus of words (eg. ['cat','carrot','dog',...]). 
+Give a function that gives an array of suggestions based on the prefix. 
+For example, 'ca' would give cat and carrot.
+
+Flattened Files: string[] GetAllFiles(string[] paths, string rootPath)
+Given some array of file.
+Give a function that returns all paths with the given root path.
+
+Odd Number Tester: bool IsOdd(int n)
+Give a function that returns true if the number is odd and false if even.
+
+Fizz Buzz: void FizzBuzz(int n)
+Classic interview questions.
+Give a function that prints "fizz" if divisible by 3, "buzz" if divisible by 5 and "fizz buzz" if divisible by both.
+
+Fibonacci Numbers: int GetFibonacciNumber(int n)
+Give a function that calculates the n-th Fibonacci number.
+
+Conway Sequence: string[] GetConwaySequence(int n)
+Give a function that calculates the n-th Conway sequence number.
+Look it up on Wikipedia. Matters less that you know what this integer sequence is and more that you know the steps to provide a solution.
+
+Primes: int[] GetPrimes(int n)
+Give a function to give a list of primes up to the n-th.
+Can be solved using various methods.
+
+Random Number: int GetRandom(int seed)
+Give a random function.
+Requires understanding how randomness works and what entropy means (you understand this from your Thermodynamics courses). 
+No machine computation is actually random but rather pseudo-random. 
+Knowing how this works is important (ie. seeding) and touching everything from security to web traffic.
+
+Hash Code: int GetHashCode(int[] fieldValues)
+Give a function to calculate a hash based on several integer values.
+Requires understanding how hashes work and why they are awesome.
+
+Roman Numeral Converter: int GetIntegerValue(string value)
+Give a function to convert a Roman numeral to a base-10 integer.
+Tests your problem solving skills more than anything.
+
+Scripting / RegEx: valid US phone #
+You should learn regular expressions eventually but can skip this for now.
+
+Whitespace Trim: string Trim(string value)
+Give a function that trims the whitespace of the value at both ends ("       hell  oooo    " should be "hell oooo").
+
+Anagrams: string[] GetAnagrams(string[] words, char[] letters)
+Give a function that finds all anagrams given a corpus of words and the letters in the anagram.
